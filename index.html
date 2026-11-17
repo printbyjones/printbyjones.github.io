@@ -21,12 +21,12 @@
         --text: #f4f4f6;
         --text-dim: #b9bac4;
         --text-faint: #8b8c99;
-        --everest: #a78bfa;
-        --everest-deep: #7c3aed;
-        --everest-blue: #6ea8ff;
-        --phoenix: #ff7a3d;
-        --phoenix-bright: #ffa03d;
-        --phoenix-deep: #dc2626;
+        --accent-violet: #a78bfa;
+        --accent-violet-deep: #7c3aed;
+        --accent-sky: #6ea8ff;
+        --accent-ember: #ff7a3d;
+        --accent-ember-bright: #ffa03d;
+        --accent-ember-deep: #dc2626;
         --radius: 18px;
       }
 
@@ -78,7 +78,7 @@
         inset: -1px;
         border-radius: 50%;
         padding: 2px;
-        background: conic-gradient(from 210deg, var(--phoenix), var(--phoenix-deep), var(--everest), var(--everest-blue), var(--phoenix));
+        background: conic-gradient(from 210deg, var(--accent-ember), var(--accent-ember-deep), var(--accent-violet), var(--accent-sky), var(--accent-ember));
         -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
         -webkit-mask-composite: xor;
         mask-composite: exclude;
@@ -94,7 +94,7 @@
         letter-spacing: -0.02em;
       }
       h1 .by {
-        background: linear-gradient(92deg, var(--phoenix) 5%, var(--phoenix-bright) 38%, var(--everest-blue) 72%, var(--everest) 95%);
+        background: linear-gradient(92deg, var(--accent-ember) 5%, var(--accent-ember-bright) 38%, var(--accent-sky) 72%, var(--accent-violet) 95%);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
@@ -112,7 +112,7 @@
         height: 3px;
         border-radius: 999px;
         margin: 26px 2px 4px;
-        background: linear-gradient(90deg, var(--phoenix-deep), var(--phoenix-bright) 28%, var(--everest-blue) 52%, var(--everest) 72%, var(--everest-deep));
+        background: linear-gradient(90deg, var(--accent-ember-deep), var(--accent-ember-bright) 28%, var(--accent-sky) 52%, var(--accent-violet) 72%, var(--accent-violet-deep));
         opacity: 0.9;
       }
 
@@ -141,7 +141,7 @@
       .link-card:hover { background: var(--surface-hover); border-color: var(--line); }
       .link-card:active { transform: scale(0.985); }
       .link-card:focus-visible {
-        outline: 3px solid var(--phoenix);
+        outline: 3px solid var(--accent-ember);
         outline-offset: 3px;
       }
 
@@ -156,9 +156,9 @@
         border: 1px solid var(--line-soft);
       }
       .icon svg { width: 24px; height: 24px; display: block; }
-      .icon.purple { color: var(--everest); }
-      .icon.fire { color: var(--phoenix); }
-      .icon.blue { color: var(--everest-blue); }
+      .icon.purple { color: var(--accent-violet); }
+      .icon.fire { color: var(--accent-ember); }
+      .icon.blue { color: var(--accent-sky); }
       .icon.pink { color: #f0a6c8; }
 
       .link-text { flex: 1 1 auto; min-width: 0; }
@@ -190,7 +190,7 @@
       .featured {
         border-radius: var(--radius);
         padding: 2px;
-        background: linear-gradient(120deg, var(--phoenix-deep), var(--phoenix-bright) 28%, var(--everest-blue) 52%, var(--everest) 70%, var(--everest-deep));
+        background: linear-gradient(120deg, var(--accent-ember-deep), var(--accent-ember-bright) 28%, var(--accent-sky) 52%, var(--accent-violet) 70%, var(--accent-violet-deep));
         box-shadow: 0 10px 34px rgba(220, 38, 38, 0.16), 0 10px 34px rgba(124, 58, 237, 0.20);
       }
       .featured .link-card {
@@ -212,7 +212,7 @@
         letter-spacing: 0.07em;
         text-transform: uppercase;
         color: #1c0d02;
-        background: linear-gradient(90deg, var(--phoenix-bright), var(--phoenix));
+        background: linear-gradient(90deg, var(--accent-ember-bright), var(--accent-ember));
         white-space: nowrap;
       }
 
@@ -258,12 +258,12 @@
       }
       .copy-btn:hover { background: var(--surface-hover); border-color: #3a3b4a; }
       .copy-btn:focus-visible {
-        outline: 3px solid var(--everest);
+        outline: 3px solid var(--accent-violet);
         outline-offset: 2px;
       }
       .copy-btn.copied {
         border-color: rgba(255, 122, 61, 0.6);
-        color: var(--phoenix);
+        color: var(--accent-ember);
       }
 
       /* ---------- Footer ---------- */
@@ -358,7 +358,22 @@
           <span class="arrow" aria-hidden="true">→</span>
         </a>
 
-        <!-- 3. Facebook -->
+        <!-- 3. OilStick -->
+        <a class="link-card" href="https://oilstick.shop/PRINTBYJONES" target="_blank" rel="noopener noreferrer">
+          <span class="icon blue" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3.5c2.8 3.6 5.5 7.1 5.5 10.3a5.5 5.5 0 1 1-11 0C6.5 10.6 9.2 7.1 12 3.5z"/>
+              <path d="M9.2 14.2a3 3 0 0 0 2 3.1"/>
+            </svg>
+          </span>
+          <span class="link-text">
+            <span class="link-title">Shop OilStick</span>
+            <span class="link-sub">No-drip brush-tip lubricant that keeps your printer running smooth</span>
+          </span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+
+        <!-- 4. Facebook -->
         <a class="link-card" href="https://www.facebook.com/PrintByJones" target="_blank" rel="noopener noreferrer">
           <span class="icon blue" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -372,7 +387,7 @@
           <span class="arrow" aria-hidden="true">→</span>
         </a>
 
-        <!-- 4. Instagram -->
+        <!-- 5. Instagram -->
         <a class="link-card" href="https://www.instagram.com/printbyjones" target="_blank" rel="noopener noreferrer">
           <span class="icon pink" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
