@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="Print By Jones — shop links and socials. 3D printing from zero, learning in public." />
+    <link rel="icon" href="data:," />
+    <title>Print By Jones Links</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #0c0d10;
+        --bg-raise: #14151b;
+        --surface: #17181f;
+        --surface-hover: #1d1e28;
+        --line: #2a2b36;
+        --line-soft: #22232d;
+        --text: #f4f4f6;
+        --text-dim: #b9bac4;
+        --text-faint: #8b8c99;
+        --everest: #a78bfa;
+        --everest-deep: #7c3aed;
+        --everest-blue: #6ea8ff;
+        --phoenix: #ff7a3d;
+        --phoenix-bright: #ffa03d;
+        --phoenix-deep: #dc2626;
+        --radius: 18px;
+      }
+
+      * { box-sizing: border-box; }
+      html { -webkit-text-size-adjust: 100%; }
+
+      body {
+        margin: 0;
+        min-height: 100dvh;
+        background:
+          radial-gradient(560px 340px at 12% -60px, rgba(220, 38, 38, 0.20), transparent 65%),
+          radial-gradient(560px 340px at 88% calc(100% + 60px), rgba(124, 58, 237, 0.22), transparent 65%),
+          radial-gradient(420px 260px at 92% -40px, rgba(255, 122, 61, 0.12), transparent 60%),
+          var(--bg);
+        color: var(--text);
+        font-family: "Archivo", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        line-height: 1.5;
+      }
+
+      .wrap {
+        max-width: 520px;
+        margin: 0 auto;
+        padding: max(28px, env(safe-area-inset-top)) 20px max(36px, env(safe-area-inset-bottom));
+        display: flex;
+        flex-direction: column;
+        min-height: 100dvh;
+      }
+
+      /* ---------- Header ---------- */
+      header {
+        text-align: center;
+        padding: 18px 4px 8px;
+      }
+
+      .mark {
+        width: 76px;
+        height: 76px;
+        margin: 0 auto 18px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: var(--bg-raise);
+        border: 1px solid var(--line);
+        position: relative;
+      }
+      .mark::before {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        border-radius: 50%;
+        padding: 2px;
+        background: conic-gradient(from 210deg, var(--phoenix), var(--phoenix-deep), var(--everest), var(--everest-blue), var(--phoenix));
+        -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+      }
+      .mark svg { width: 38px; height: 38px; }
+
+      h1 {
+        margin: 0;
+        font-size: 2.35rem;
+        line-height: 1.05;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+      }
+      h1 .by {
+        background: linear-gradient(92deg, var(--phoenix) 5%, var(--phoenix-bright) 38%, var(--everest-blue) 72%, var(--everest) 95%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .tagline {
+        margin: 14px auto 0;
+        max-width: 42ch;
+        font-size: 1.02rem;
+        font-weight: 500;
+        color: var(--text-dim);
+      }
+
+      .theme-line {
+        height: 3px;
+        border-radius: 999px;
+        margin: 26px 2px 4px;
+        background: linear-gradient(90deg, var(--phoenix-deep), var(--phoenix-bright) 28%, var(--everest-blue) 52%, var(--everest) 72%, var(--everest-deep));
+        opacity: 0.9;
+      }
+
+      /* ---------- Links ---------- */
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin-top: 22px;
+      }
+
+      .link-card {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        min-height: 72px;
+        padding: 16px 18px;
+        border-radius: var(--radius);
+        background: var(--surface);
+        border: 1px solid var(--line-soft);
+        color: var(--text);
+        text-decoration: none;
+        -webkit-tap-highlight-color: transparent;
+        transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+      }
+      .link-card:hover { background: var(--surface-hover); border-color: var(--line); }
+      .link-card:active { transform: scale(0.985); }
+      .link-card:focus-visible {
+        outline: 3px solid var(--phoenix);
+        outline-offset: 3px;
+      }
+
+      .icon {
+        flex: 0 0 auto;
+        width: 46px;
+        height: 46px;
+        border-radius: 13px;
+        display: grid;
+        place-items: center;
+        background: #101116;
+        border: 1px solid var(--line-soft);
+      }
+      .icon svg { width: 24px; height: 24px; display: block; }
+      .icon.purple { color: var(--everest); }
+      .icon.fire { color: var(--phoenix); }
+      .icon.blue { color: var(--everest-blue); }
+      .icon.pink { color: #f0a6c8; }
+
+      .link-text { flex: 1 1 auto; min-width: 0; }
+      .link-title {
+        display: block;
+        font-size: 1.06rem;
+        font-weight: 700;
+        line-height: 1.25;
+        letter-spacing: -0.01em;
+      }
+      .link-sub {
+        display: block;
+        margin-top: 3px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--text-dim);
+        line-height: 1.4;
+      }
+
+      .arrow {
+        flex: 0 0 auto;
+        color: var(--text-faint);
+        font-size: 1.25rem;
+        font-weight: 600;
+        line-height: 1;
+      }
+
+      /* Featured — Flashforge */
+      .featured {
+        border-radius: var(--radius);
+        padding: 2px;
+        background: linear-gradient(120deg, var(--phoenix-deep), var(--phoenix-bright) 28%, var(--everest-blue) 52%, var(--everest) 70%, var(--everest-deep));
+        box-shadow: 0 10px 34px rgba(220, 38, 38, 0.16), 0 10px 34px rgba(124, 58, 237, 0.20);
+      }
+      .featured .link-card {
+        border: none;
+        border-radius: 16px;
+        background: #191a23;
+        min-height: 84px;
+      }
+      .featured .link-card:hover { background: #1f2030; }
+
+      .badge {
+        display: inline-block;
+        vertical-align: 2px;
+        margin-left: 8px;
+        padding: 2px 8px;
+        border-radius: 999px;
+        font-size: 0.68rem;
+        font-weight: 800;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: #1c0d02;
+        background: linear-gradient(90deg, var(--phoenix-bright), var(--phoenix));
+        white-space: nowrap;
+      }
+
+      code.code {
+        font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-weight: 700;
+        font-size: 0.86em;
+        color: #ffab73;
+        background: rgba(255, 122, 61, 0.12);
+        border: 1px solid rgba(255, 122, 61, 0.34);
+        border-radius: 6px;
+        padding: 1px 6px;
+        white-space: nowrap;
+      }
+
+      .copy-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 10px;
+        padding: 0 4px;
+      }
+      .copy-hint {
+        font-size: 0.85rem;
+        color: var(--text-faint);
+        font-weight: 500;
+      }
+      .copy-btn {
+        appearance: none;
+        border: 1px solid var(--line);
+        background: var(--bg-raise);
+        color: var(--text);
+        font-family: inherit;
+        font-size: 0.88rem;
+        font-weight: 700;
+        min-height: 44px;
+        padding: 9px 16px;
+        border-radius: 999px;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        transition: background 0.15s ease, border-color 0.15s ease;
+      }
+      .copy-btn:hover { background: var(--surface-hover); border-color: #3a3b4a; }
+      .copy-btn:focus-visible {
+        outline: 3px solid var(--everest);
+        outline-offset: 2px;
+      }
+      .copy-btn.copied {
+        border-color: rgba(255, 122, 61, 0.6);
+        color: var(--phoenix);
+      }
+
+      /* ---------- Footer ---------- */
+      footer {
+        margin-top: auto;
+        padding-top: 38px;
+        text-align: center;
+      }
+      .disclosure {
+        margin: 0 auto;
+        max-width: 44ch;
+        font-size: 0.82rem;
+        line-height: 1.55;
+        color: var(--text-faint);
+      }
+      .foot-mark {
+        margin-top: 16px;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #55565f;
+      }
+
+      @media (min-width: 640px) {
+        .wrap { padding-top: 48px; }
+        h1 { font-size: 2.7rem; }
+        .link-title { font-size: 1.12rem; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .link-card, .copy-btn { transition: none; }
+        .link-card:active { transform: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="mark" aria-hidden="true">
+          <!-- 3D printer icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="#e9e9ee" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 9V3h12v6" stroke="#ff7a3d"/>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" stroke="#e9e9ee"/>
+            <rect x="6" y="14" width="12" height="7" rx="1" stroke="#a78bfa"/>
+            <path d="M10 17.5h4" stroke="#a78bfa"/>
+          </svg>
+        </div>
+        <h1>Print <span class="by">By Jones</span></h1>
+        <p class="tagline">🖨️ 3D printing from ZERO — learning in public! The fails, the fixes &amp; the first prints on my Flashforge Creator 5 Pro.</p>
+        <div class="theme-line" aria-hidden="true"></div>
+      </header>
+
+      <nav aria-label="Print By Jones links">
+        <!-- 1. Flashforge (featured) -->
+        <div>
+          <div class="featured">
+            <a class="link-card" href="https://flashforge.sjv.io/rEPjoG" target="_blank" rel="noopener noreferrer">
+              <span class="icon fire" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 9V3h12v6"/>
+                  <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+                  <rect x="6" y="14" width="12" height="7" rx="1"/>
+                </svg>
+              </span>
+              <span class="link-text">
+                <span class="link-title">Shop Flashforge — printers, filament &amp; more<span class="badge">Start here</span></span>
+                <span class="link-sub">Extra $30 off a Creator 5 / 5 Pro with code <code class="code">C5CREATOR30</code></span>
+              </span>
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+          <div class="copy-row">
+            <span class="copy-hint" id="copy-status" role="status" aria-live="polite">Use the code at checkout on Flashforge's store.</span>
+            <button class="copy-btn" type="button" id="copy-code">Copy code</button>
+          </div>
+        </div>
+
+        <!-- 2. Overture -->
+        <a class="link-card" href="https://overture3d.com/?aff=316" target="_blank" rel="noopener noreferrer">
+          <span class="icon fire" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/>
+              <circle cx="12" cy="12" r="3.2"/>
+              <path d="M12 3v3M21 12h-3M12 21v-3M3 12h3"/>
+            </svg>
+          </span>
+          <span class="link-text">
+            <span class="link-title">Shop Overture Filament</span>
+            <span class="link-sub">PLA, PETG &amp; more for your next print</span>
+          </span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+
+        <!-- 3. Facebook -->
+        <a class="link-card" href="https://www.facebook.com/PrintByJones" target="_blank" rel="noopener noreferrer">
+          <span class="icon blue" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2.1-.1-2.1 0-3.6 1.3-3.6 3.7V11H8.3v3h2.4v7h2.8z"/>
+            </svg>
+          </span>
+          <span class="link-text">
+            <span class="link-title">Print By Jones on Facebook</span>
+            <span class="link-sub">Posts, unboxings &amp; print updates</span>
+          </span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+
+        <!-- 4. Instagram -->
+        <a class="link-card" href="https://www.instagram.com/printbyjones" target="_blank" rel="noopener noreferrer">
+          <span class="icon pink" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/>
+            </svg>
+          </span>
+          <span class="link-text">
+            <span class="link-title">@printbyjones on Instagram</span>
+            <span class="link-sub">Reels, first prints &amp; behind the scenes</span>
+          </span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </nav>
+
+      <footer>
+        <p class="disclosure">Some links are affiliate links — I may earn a commission at no extra cost to you. Thanks for supporting the page!</p>
+        <p class="foot-mark">Print By Jones</p>
+      </footer>
+    </div>
+
+    <script>
+      (function () {
+        var btn = document.getElementById("copy-code");
+        var status = document.getElementById("copy-status");
+        var CODE = "C5CREATOR30";
+        var defaultHint = status.textContent;
+        var timer = null;
+
+        function showCopied() {
+          btn.textContent = "Copied ✓";
+          btn.classList.add("copied");
+          status.textContent = "Code C5CREATOR30 copied — paste it at checkout.";
+          if (timer) clearTimeout(timer);
+          timer = setTimeout(function () {
+            btn.textContent = "Copy code";
+            btn.classList.remove("copied");
+            status.textContent = defaultHint;
+          }, 2600);
+        }
+
+        function fallbackCopy() {
+          var ta = document.createElement("textarea");
+          ta.value = CODE;
+          ta.setAttribute("readonly", "");
+          ta.style.position = "fixed";
+          ta.style.opacity = "0";
+          document.body.appendChild(ta);
+          ta.select();
+          var ok = false;
+          try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+          document.body.removeChild(ta);
+          if (ok) {
+            showCopied();
+          } else {
+            status.textContent = "Code: C5CREATOR30 — type it in at checkout.";
+          }
+        }
+
+        btn.addEventListener("click", function () {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(CODE).then(showCopied, fallbackCopy);
+          } else {
+            fallbackCopy();
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
