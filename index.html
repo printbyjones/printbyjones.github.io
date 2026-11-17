@@ -116,6 +116,38 @@
         opacity: 0.9;
       }
 
+      /* ---------- Icon row ---------- */
+      .icon-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+        margin-top: 20px;
+      }
+      .icon-btn {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        display: grid;
+        place-items: center;
+        background: var(--surface);
+        border: 1px solid var(--line-soft);
+        color: var(--text);
+        text-decoration: none;
+        -webkit-tap-highlight-color: transparent;
+        transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+      }
+      .icon-btn:hover { background: var(--surface-hover); border-color: var(--line); }
+      .icon-btn:active { transform: scale(0.96); }
+      .icon-btn:focus-visible {
+        outline: 3px solid var(--accent-ember);
+        outline-offset: 3px;
+      }
+      .icon-btn svg { width: 26px; height: 26px; display: block; }
+      .icon-btn.mail { color: var(--accent-ember-bright); }
+      .icon-btn.fb { color: var(--accent-sky); }
+      .icon-btn.ig { color: #f0a6c8; }
+
       /* ---------- Links ---------- */
       nav {
         display: flex;
@@ -295,8 +327,8 @@
       }
 
       @media (prefers-reduced-motion: reduce) {
-        .link-card, .copy-btn { transition: none; }
-        .link-card:active { transform: none; }
+        .link-card, .copy-btn, .icon-btn { transition: none; }
+        .link-card:active, .icon-btn:active { transform: none; }
       }
     </style>
   </head>
@@ -314,6 +346,26 @@
         </div>
         <h1>Print <span class="by">By Jones</span></h1>
         <p class="tagline">🖨️ 3D printing from ZERO — learning in public! The fails, the fixes &amp; the first prints on my Flashforge Creator 5 Pro.</p>
+        <div class="icon-row" aria-label="Quick contact and socials">
+          <a class="icon-btn mail" href="mailto:printbyjones@gmail.com" aria-label="Email Print By Jones" title="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="14" rx="3"/>
+              <path d="M4 7.5l8 6 8-6"/>
+            </svg>
+          </a>
+          <a class="icon-btn fb" href="https://www.facebook.com/PrintByJones" target="_blank" rel="noopener noreferrer" aria-label="Print By Jones on Facebook" title="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2.1-.1-2.1 0-3.6 1.3-3.6 3.7V11H8.3v3h2.4v7h2.8z"/>
+            </svg>
+          </a>
+          <a class="icon-btn ig" href="https://www.instagram.com/printbyjones" target="_blank" rel="noopener noreferrer" aria-label="@printbyjones on Instagram" title="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+        </div>
         <div class="theme-line" aria-hidden="true"></div>
       </header>
 
